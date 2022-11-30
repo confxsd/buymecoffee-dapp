@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# buy me a coffee dapp
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+> "Buy Me a Coffee" DeFi Dapp (Solidity, Hardhat, Ethers.js, Alchemy) | Road to Web3
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+`npm run deploy` to deploy
