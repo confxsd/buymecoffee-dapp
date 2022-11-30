@@ -7,19 +7,14 @@
 const hre = require("hardhat");
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_MINUTE_IN_SECS = 60;
-  const unlockTime = currentTimestampInSeconds + ONE_MINUTE_IN_SECS;
 
-  const lockedAmount = hre.ethers.utils.parseEther("0.01");
+  const Coffee = await hre.ethers.getContractFactory("Coffee");
+  const coffee = await Coffee.deploy();
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
-
-  await lock.deployed();
+  await coffee.deployed();
 
   console.log(
-    `Lock with 0.01 MATIC and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `Coffee Dapp deployed to ${coffee.address}`
   );
 }
 
